@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sistema de Eventos</title>
+    <!-- Vinculação do CSS Externo -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Container Principal -->
+    <div class="container">
+        <!-- Cabeçalho do Sistema -->
+        <header>
+            <h1>Sistema de Eventos</h1>
+        </header>
+
+        <!-- Formulário para Cadastro de Evento -->
+        <div class="form-section">
+            <h2>Cadastrar Novo Evento</h2>
+            <form id="eventForm" action="#" method="POST">
+                <label for="eventName">Nome do Evento:</label>
+                <input type="text" id="eventName" name="eventName" placeholder="Nome completo do evento" required>
+
+                <label for="eventDate">Data do Evento:</label>
+                <input type="date" id="eventDate" name="eventDate" required>
+
+                <label for="eventLocation">Local do Evento:</label>
+                <input type="text" id="eventLocation" name="eventLocation" placeholder="Local onde o evento acontecerá" required>
+
+                <label for="eventDescription">Descrição do Evento:</label>
+                <textarea id="eventDescription" name="eventDescription" placeholder="Adicione uma breve descrição do evento" rows="4"></textarea>
+
+                <button type="submit">Cadastrar Evento</button>
+            </form>
+        </div>
+
+        <!-- Tabela de Eventos Cadastrados -->
+        <div class="table-section">
+            <h2>Eventos Cadastrados</h2>
+            <table id="eventTable">
+                <thead>
+                    <tr>
+                        <th>Nome do Evento</th>
+                        <th>Data</th>
+                        <th>Local</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Formulário para Cadastro de Participante -->
+        <div class="participant-section">
+            <h2>Adicionar Participante</h2>
+            <form id="participantForm" action="#" method="POST">
+                <label for="participantName">Nome do Participante:</label>
+                <input type="text" id="participantName" name="participantName" placeholder="Nome completo do participante" required>
+            
+                <label for="participantEmail">Email do Participante:</label>
+                <input type="email" id="participantEmail" name="participantEmail" placeholder="Email do participante" required>
+            
+                <label for="participantPhone">Telefone do Participante:</label>
+                <input type="tel" id="participantPhone" name="participantPhone" placeholder="Telefone de contato">
+            
+                <label for="eventSelect">Escolher Evento:</label>
+                <select id="eventSelect" name="eventSelect" required>
+                    <option value="">Selecione o evento</option>
+                    <!-- Eventos serão carregados dinamicamente -->
+                </select>
+            
+                <button type="submit">Cadastrar Participante</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Inclusão de Script Externo (JavaScript) -->
+    <script src="js/app.js"></script>
+</body>
+</html>
